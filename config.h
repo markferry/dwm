@@ -14,7 +14,7 @@ static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = True;     /* False means bottom bar */
 
 /* tagging */
-static const char *tags[] = { "1-mail", "2-net", "3-dev0", "4-dev1", "5-dev2", "6-dev3", "7-chat", "8-vm", "9-arb" };
+static const char *tags[] = { "1-pim", "2-net", "3-cogn", "4", "5", "6", "7-chat", "8-vm", "9-arb" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -26,6 +26,7 @@ static const Rule rules[] = {
 	{ "Gnome-panel",  NULL,   NULL,       1 << 8,       True,       -1 },
 	{ "Skype",    NULL,       NULL,       1 << 6,       False,       -1 },
 	{ "Gcalctool", NULL,      NULL,       0,            True,       -1 },
+	{ "Pidgin",    NULL,       NULL,       1 << 6,       False,       -1 },
 //	{ "Firefox",  NULL,       NULL,       1 << 2,       False,       -1 },
 };
 
