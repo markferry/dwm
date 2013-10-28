@@ -25,6 +25,7 @@ static const Rule rules[] = {
 	{ "Gimp",     NULL,       NULL,       0,            True,        -1 },
 	{ "Gnome-panel",  NULL,   NULL,       1 << 8,       True,       -1 },
 	{ "Skype",    NULL,       NULL,       1 << 6,       False,       -1 },
+	{ "gcalctool", NULL,      NULL,       0,            True,       -1 },
 //	{ "Firefox",  NULL,       NULL,       1 << 2,       False,       -1 },
 };
 
