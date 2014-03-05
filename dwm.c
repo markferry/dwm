@@ -170,6 +170,7 @@ static void focus(Client *c);
 static void focusin(XEvent *e);
 static void focusmon(const Arg *arg);
 static void focusstack(const Arg *arg);
+static void focusmaster(const Arg *arg);
 static Bool getrootptr(int *x, int *y);
 static long getstate(Window w);
 static Bool gettextprop(Window w, Atom atom, char *text, unsigned int size);
@@ -863,6 +864,11 @@ focusstack(const Arg *arg) {
 		focus(c);
 		restack(selmon);
 	}
+}
+
+void
+focusmaster(const Arg *arg) {
+	focus(nexttiled(selmon->clients));
 }
 
 Atom
