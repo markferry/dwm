@@ -30,6 +30,7 @@ static const Rule rules[] = {
 	{ "Skype",    NULL,       NULL,       1 << 6,       False,       -1 },
 	{ "Xchat",    NULL,       NULL,       1 << 6,       False,       -1 },
 	{ "Gnome-panel", NULL,    NULL,       1 << 8,       True,        -1 },
+	{ "Nautilus", NULL,       "Desktop",  1 << 8,       False,       -1 },
 };
 
 /* layout(s) */
