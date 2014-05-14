@@ -22,14 +22,14 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
+	{ "Gcalctool", NULL,      NULL,       0,            True,        -1 },
 	{ "Gimp",     NULL,       NULL,       0,            True,        -1 },
 	{ "Mutt",     NULL,       NULL,       1 << 0,       False,       -1 }, /* xterm -class */
-	{ "Gnome-panel",  NULL,   NULL,       1 << 8,       True,       -1 },
-	{ "Skype",    NULL,       NULL,       1 << 6,       False,       -1 },
-	{ "Gcalctool", NULL,      NULL,       0,            True,       -1 },
-	{ "Pidgin",    NULL,       NULL,       1 << 6,       False,       -1 },
-	{ "Xchat",    NULL,       NULL,       1 << 6,       False,       -1 },
 //	{ "Firefox",  NULL,       NULL,       1 << 2,       False,       -1 },
+	{ "Pidgin",   NULL,       NULL,       1 << 6,       False,       -1 },
+	{ "Skype",    NULL,       NULL,       1 << 6,       False,       -1 },
+	{ "Xchat",    NULL,       NULL,       1 << 6,       False,       -1 },
+	{ "Gnome-panel", NULL,    NULL,       1 << 8,       True,        -1 },
 };
 
 /* layout(s) */
