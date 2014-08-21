@@ -59,9 +59,9 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", /*"-m", dmenumon, "-fn", font,*/ "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]  = { "uxterm", "", NULL };
-static const char *powercmd[]  = { "gnome-session-save", "--gui --shutdown-dialog", NULL };
-static const char *logoutcmd[]= { "gnome-session-save", "--gui --logout-dialog", NULL };
+static const char *termcmd[]  = { "sakura", "", NULL };
+static const char *logoutcmd[]= { "lxsession-logout", "", NULL };
+static const char *lockcmd[]= { "lxsession-logout", "", NULL };
 
 #include "movestack.c"
 static Key keys[] = {
@@ -101,8 +101,8 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-//	{ MODKEY|ShiftMask,             XK_l,      spawn,           {.v = logoutcmd} },
-	{ MODKEY|ShiftMask,             XK_q,      spawn,           {.v = powercmd} },
+	{ MODKEY|ControlMask,           XK_l,      spawn,           {.v = lockcmd} },
+	{ MODKEY|ShiftMask,             XK_q,      spawn,           {.v = logoutcmd} },
 };
 
 /* button definitions */
