@@ -1,4 +1,5 @@
 /* See LICENSE file for copyright and license details. */
+#include <X11/XF86keysym.h>
 
 /* appearance */
 static const char font[]            = "-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*";
@@ -61,7 +62,12 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", /*"-m", dmenumon, "-fn", font,*/ "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { "sakura", "", NULL };
 static const char *logoutcmd[]= { "lxsession-logout", "", NULL };
-static const char *lockcmd[]= { "lxsession-logout", "", NULL };
+static const char *lockcmd[]= { "xscreensaver-command", "-lock", NULL };
+static const char *brightupcmd[]= { "brightness", "up", NULL };
+static const char *brightdowncmd[]= { "brightness", "down", NULL };
+static const char *mutecmd[]= { "dwm-vol-mute", NULL };
+static const char *voldowncmd[]= { "dwm-vol-down", NULL };
+static const char *volupcmd[]= { "dwm-vol-up", NULL };
 
 #include "movestack.c"
 static Key keys[] = {
@@ -103,6 +109,12 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ControlMask,           XK_l,      spawn,           {.v = lockcmd} },
 	{ MODKEY|ShiftMask,             XK_q,      spawn,           {.v = logoutcmd} },
+	{ ControlMask,                  XK_F6,     spawn,          {.v = brightdowncmd } },
+	{ ControlMask,                  XK_F7,     spawn,          {.v = brightupcmd } },
+	{ ControlMask,                  XK_F8,     spawn,          {.v = mutecmd } },
+	{ ControlMask,                  XK_F9,     spawn,          {.v = voldowncmd } },
+	{ ControlMask,                  XK_F10,    spawn,          {.v = volupcmd } },
+	{ 0,                            XF86XK_PowerOff, spawn,    {.v = logoutcmd } },
 };
 
 /* button definitions */
