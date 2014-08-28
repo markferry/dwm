@@ -65,9 +65,9 @@ static const char *logoutcmd[]= { "lxsession-logout", "", NULL };
 static const char *lockcmd[]= { "xscreensaver-command", "-lock", NULL };
 static const char *brightupcmd[]= { "brightness", "up", NULL };
 static const char *brightdowncmd[]= { "brightness", "down", NULL };
-static const char *mutecmd[]= { "dwm-vol-mute", NULL };
-static const char *voldowncmd[]= { "dwm-vol-down", NULL };
-static const char *volupcmd[]= { "dwm-vol-up", NULL };
+static const char *mutecmd[]= { "dwm-volume", "mute", NULL };
+static const char *voldowncmd[]= { "dwm-volume", "down", NULL };
+static const char *volupcmd[]= { "dwm-volume", "up", NULL };
 
 #include "movestack.c"
 static Key keys[] = {
