@@ -9,7 +9,7 @@ static const char normfgcolor[]     = "#bbbbbb";
 static const char selbordercolor[]  = "#c02222";
 static const char selbgcolor[]      = "#005577";
 static const char selfgcolor[]      = "#eeeeee";
-static const unsigned int borderpx  = 3;        /* border pixel of windows */
+static const unsigned int borderpx  = 4;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = True;     /* False means bottom bar */
@@ -108,13 +108,13 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ControlMask,           XK_l,      spawn,           {.v = lockcmd} },
-	{ MODKEY|ShiftMask,             XK_q,      spawn,           {.v = logoutcmd} },
 	{ ControlMask,                  XK_F6,     spawn,          {.v = brightdowncmd } },
 	{ ControlMask,                  XK_F7,     spawn,          {.v = brightupcmd } },
 	{ ControlMask,                  XK_F8,     spawn,          {.v = mutecmd } },
 	{ ControlMask,                  XK_F9,     spawn,          {.v = voldowncmd } },
 	{ ControlMask,                  XK_F10,    spawn,          {.v = volupcmd } },
 	{ 0,                            XF86XK_PowerOff, spawn,    {.v = logoutcmd } },
+	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
 /* button definitions */
