@@ -55,7 +55,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", /*"-m", dmenumon, "-fn", font,*/ "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]  = { "uxterm", "", NULL };
+static const char *termcmd[]  = { "sakura", "", NULL };
 static const char *powercmd[]  = { "gnome-session-quit", "--power-off", NULL };
 static const char *logoutcmd[]= { "gnome-session-quit", "--logout", NULL };
 
